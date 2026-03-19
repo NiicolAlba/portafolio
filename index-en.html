@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nicol Alba">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Nicol Alba - Systems Student and QC Trainee at Globant">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Variables for light mode (default) */
+        :root {
+            --primary-blue: #2c3e50;
+            --secondary-blue: #3498db;
+            --accent-blue: #2980b9;
+            --light-gray: #ecf0f1;
+            --medium-gray: #bdc3c7;
+            --dark-gray: #34495e;
+            --soft-blue: #e1f0fa;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            --card-bg: white;
+            --text-color: #2c3e50;
+            --text-muted: #6c757d;
+            --border-color: #dee2e6;
+            --profile-bg: white;
+            --title-color: #2c3e50;
+            --navbar-bg: linear-gradient(135deg, #2c3e50, #34495e);
+        }
+
+        /* Variables for dark mode */
+        [data-theme="dark"] {
+            --primary-blue: #60a5fa;
+            --secondary-blue: #3b82f6;
+            --accent-blue: #2563eb;
+            --light-gray: #1f2937;
+            --medium-gray: #374151;
+            --dark-gray: #111827;
+            --soft-blue: #1e3a8a;
+            --bg-gradient: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            --card-bg: #1f2937;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #374151;
+            --profile-bg: #1f2937;
+            --title-color: #93c5fd;
+            --navbar-bg: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+        
+        body {
+            background: var(--bg-gradient);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+            position: relative;
+            color: var(--text-color);
+            transition: background 0.3s ease, color 0.3s ease;
+            min-height: 100vh;
+        }
+
+        /* Background with tech icons */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%233498db" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M12 22V12"/><path d="M3.3 7L12 12l8.7-5"/><circle cx="12" cy="12" r="2"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="%233498db" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="%233498db" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>');
+            background-repeat: repeat;
+            background-size: 60px 60px, 80px 80px, 100px 100px;
+            background-position: 0 0, 50px 30px, 120px 80px;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.15;
+            animation: floatIcons 120s linear infinite;
+        }
+
+        @keyframes floatIcons {
+            0% {
+                background-position: 0 0, 50px 30px, 120px 80px;
+            }
+            100% {
+                background-position: 200px 200px, 250px 230px, 320px 280px;
+            }
+        }
+
+        [data-theme="dark"] body::before {
+            opacity: 0.1;
+            filter: brightness(0.8);
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+            color: var(--title-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-blue), var(--accent-blue));
+            border-radius: 2px;
+        }
+
+        .section-title i {
+            color: var(--secondary-blue);
+            margin-right: 10px;
+        }
+
+        /* Navbar buttons */
+        .navbar-left-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .theme-switch, .language-switch {
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .theme-switch {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+
+        .language-switch {
+            width: 50px;
+            height: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .theme-switch:hover, .language-switch:hover {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Navbar */
+        .navbar-custom {
+            background: var(--navbar-bg);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 0.8rem 0;
+            transition: background 0.3s ease;
+        }
+
+        .navbar-custom .navbar-brand {
+            font-weight: 700;
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 10px;
+        }
+
+        .navbar-custom .nav-link {
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .navbar-custom .nav-link:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .navbar-custom .nav-link i {
+            font-size: 1.2rem;
+        }
+
+        .navbar-custom .dropdown-menu {
+            background: var(--dark-gray);
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 0.5rem;
+        }
+
+        .navbar-custom .dropdown-item {
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.7rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-custom .dropdown-item:hover {
+            background: var(--secondary-blue);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Cards */
+        .card-modern {
+            border: none;
+            border-radius: 20px;
+            background: var(--card-bg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            color: var(--text-color);
+        }
+
+        .card-modern:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+        }
+
+        .card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary-blue), var(--accent-blue));
+        }
+
+        .card-header-custom {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-gray));
+            color: white;
+            padding: 1.5rem;
+            border-bottom: none;
+        }
+
+        .card-header-custom i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Badges */
+        .badge-tech {
+            background: var(--soft-blue);
+            color: var(--text-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--secondary-blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge-tech i {
+            color: var(--secondary-blue);
+            font-size: 1rem;
+        }
+
+        .badge-tech:hover {
+            background: var(--secondary-blue);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .badge-tech:hover i {
+            color: white;
+        }
+
+        /* Profile */
+        .profile-container {
+            background: var(--profile-bg);
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            color: var(--text-color);
+            transition: background 0.3s ease;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+            transition: transform 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight-text {
+            color: var(--secondary-blue);
+            font-weight: 700;
+        }
+
+        .text-muted {
+            color: var(--text-muted) !important;
+        }
+
+        /* Buttons */
+        .btn-custom-primary {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-custom-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.5);
+            color: white;
+        }
+
+        .btn-custom-outline {
+            background: transparent;
+            border: 2px solid var(--secondary-blue);
+            color: var(--secondary-blue);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-custom-outline:hover {
+            background: var(--secondary-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-contact {
+            background: transparent;
+            border: 2px solid var(--secondary-blue);
+            color: var(--secondary-blue);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-contact:hover,
+        .btn-contact:active,
+        .btn-contact:focus {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+            color: white;
+            border: 2px solid transparent;
+            transform: translateY(-2px);
+        }
+
+        /* Decorative floating icons */
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            color: var(--secondary-blue);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .icon-1 {
+            top: 10%;
+            left: 5%;
+            font-size: 5rem;
+            transform: rotate(15deg);
+        }
+
+        .icon-2 {
+            bottom: 20%;
+            right: 5%;
+            font-size: 6rem;
+            transform: rotate(-10deg);
+        }
+
+        .icon-3 {
+            top: 30%;
+            right: 10%;
+            font-size: 4rem;
+        }
+
+        /* Floating social icons */
+        .social-floating {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .social-floating a {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            text-decoration: none;
+        }
+
+        .social-floating a:hover {
+            transform: scale(1.2) translateX(-5px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.5);
+        }
+
+        /* Timeline */
+        .experience-item {
+            position: relative;
+            padding: 1rem 1rem 1rem 2.5rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--secondary-blue);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background: var(--soft-blue);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .experience-item i {
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--card-bg);
+            color: var(--secondary-blue);
+            font-size: 1.2rem;
+            padding: 0.3rem;
+            border-radius: 50%;
+            border: 2px solid var(--secondary-blue);
+            transition: background 0.3s ease;
+        }
+
+        /* Skills list */
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-list i {
+            color: var(--secondary-blue);
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* Accordion */
+        .accordion-item {
+            border: none;
+            background: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .accordion-button {
+            background: var(--soft-blue);
+            color: var(--text-color);
+            font-weight: 600;
+            border-radius: 10px !important;
+            box-shadow: none;
+            padding: 1rem 1.2rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--secondary-blue);
+            color: white;
+        }
+
+        .accordion-button:not(.collapsed) i {
+            color: white !important;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        .accordion-button::after {
+            background-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-body {
+            background: var(--card-bg);
+            border-radius: 0 0 10px 10px;
+            padding: 1.2rem;
+            border: 1px solid var(--border-color);
+            border-top: none;
+            color: var(--text-color);
+        }
+
+        .accordion-body .skill-list {
+            margin-bottom: 0;
+        }
+
+        .accordion-body .skill-list li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+        }
+
+        /* Carousel */
+        .carousel-proyectos {
+            padding: 0 2rem;
+        }
+
+        .carousel-proyectos .carousel-control-prev,
+        .carousel-proyectos .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-blue);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .carousel-proyectos .carousel-control-prev {
+            left: -20px;
+        }
+
+        .carousel-proyectos .carousel-control-next {
+            right: -20px;
+        }
+
+        .carousel-proyectos .carousel-control-prev:hover,
+        .carousel-proyectos .carousel-control-next:hover {
+            background: var(--accent-blue);
+            opacity: 1;
+        }
+
+        .carousel-proyectos .carousel-control-prev-icon,
+        .carousel-proyectos .carousel-control-next-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .carousel-proyectos .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Testimonials */
+        .testimonio-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 100%;
+            transition: all 0.3s ease;
+            color: var(--text-color);
+        }
+
+        .testimonio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+        }
+
+        .testimonio-card i.bi-quote {
+            font-size: 3rem;
+            color: var(--soft-blue);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            opacity: 0.5;
+        }
+
+        .testimonio-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* QR */
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        #qrcode canvas {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer-custom {
+            background: var(--navbar-bg);
+            color: white;
+            padding: 2rem 0;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+
+        .footer-custom p {
+            margin-bottom: 0.5rem;
+        }
+
+        [data-theme="dark"] .card-img-top {
+            background-color: #f5f5f5 !important;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .profile-container {
+                padding: 1.2rem !important;
+            }
+            
+            .profile-img {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 1rem;
+            }
+            
+            h1.display-3 {
+                font-size: 2.2rem !important;
+                text-align: center;
+            }
+            
+            h4.text-muted {
+                text-align: center;
+                font-size: 1.1rem;
+            }
+            
+            p.lead {
+                text-align: center;
+                font-size: 1rem;
+            }
+            
+            .badge-tech {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .card-modern {
+                margin-bottom: 1rem;
+            }
+            
+            .card-modern .p-4 {
+                padding: 1.2rem !important;
+            }
+            
+            .accordion-button {
+                padding: 0.8rem 1rem;
+                font-size: 0.95rem;
+            }
+            
+            .experience-item {
+                padding: 0.8rem 0.8rem 0.8rem 2rem;
+            }
+            
+            .experience-item .row {
+                flex-direction: column;
+            }
+            
+            .experience-item .col-12.col-md-3 {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+            
+            .testimonio-card {
+                padding: 1.5rem;
+            }
+            
+            .testimonio-img {
+                width: 70px;
+                height: 70px;
+            }
+            
+            #qrcode canvas {
+                width: 180px !important;
+                height: 180px !important;
+            }
+            
+            .card-modern.p-4 .d-flex.align-items-center {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem !important;
+            }
+            
+            .card-modern.p-4 .d-flex.align-items-center i {
+                margin-bottom: 0.5rem;
+            }
+            
+            .navbar-custom .navbar-collapse {
+                background: var(--navbar-bg);
+                margin-top: 1rem;
+                border-radius: 15px;
+                padding: 1rem;
+            }
+            
+            .navbar-custom .nav-link {
+                justify-content: center;
+                padding: 0.8rem;
+            }
+            
+            .navbar-custom .dropdown-menu {
+                background: var(--dark-gray);
+                border: none;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .navbar-custom .dropdown-item {
+                justify-content: center;
+            }
+
+            .social-floating {
+                right: auto;
+                left: 0;
+                top: auto;
+                bottom: 15px;
+                transform: none;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                gap: 15px;
+                z-index: 9999;
+                pointer-events: none;
+            }
+
+            .social-floating a {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+                pointer-events: auto;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            }
+
+            .social-floating a:hover {
+                transform: scale(1.1) translateY(-5px);
+            }
+
+            main {
+                padding-bottom: 80px !important;
+            }
+
+            .navbar-left-buttons {
+                margin-right: 10px;
+            }
+
+            .theme-switch {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .language-switch {
+                width: 45px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+
+            .navbar-custom .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .carousel-proyectos {
+                padding: 0 1.5rem;
+            }
+
+            .carousel-proyectos .carousel-control-prev {
+                left: -15px;
+            }
+
+            .carousel-proyectos .carousel-control-next {
+                right: -15px;
+            }
+        }
+
+        /* Hide on desktop */
+        @media (min-width: 769px) {
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        /* Hide on mobile */
+        @media (max-width: 768px) {
+            .desktop-only {
+                display: none;
+            }
+        }
+    </style>
+    <title>Nicol Alba | Professional Portfolio</title>
+</head>
+<body>
+    <!-- Decorative floating icons -->
+    <i class="bi bi-bug floating-icon icon-1"></i>
+    <i class="bi bi-code-slash floating-icon icon-2"></i>
+    <i class="bi bi-diagram-3 floating-icon icon-3"></i>
+
+    <!-- Floating social icons on the right -->
+    <article class="social-floating">
+        <a href="https://github.com/NiicolAlba" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/nicol-tatiana-gonz%C3%A1lez-alba" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/573142671955" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </article>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <section class="container">
+            <div class="navbar-left-buttons">
+                <!-- Dark/Light mode button -->
+                <button class="theme-switch" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i class="bi bi-sun" id="themeIcon"></i>
+                </button>
+                
+                <!-- Language button ES/EN -->
+                <button class="language-switch" id="languageToggle">
+                    <span id="languageText">EN</span>
+                </button>
+            </div>
+            
+            <a class="navbar-brand" href="#">
+                Nicol Alba
+            </a>
+            
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+            <section class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <i class="bi bi-person"></i> About me
+                        </a>
+                    </li>
+                    
+                    <!-- DROPDOWN 1: EDUCATION -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="educationDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-mortarboard"></i> Education
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#education"><i class="bi bi-laptop"></i> Education</a></li>
+                            <li><a class="dropdown-item" href="#certifications"><i class="bi bi-file-earmark-pdf"></i> Certifications</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">
+                            <i class="bi bi-briefcase"></i> Experience
+                        </a>
+                    </li>
+                    
+                    <!-- DROPDOWN 2: PROJECTS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-code-square"></i> Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#tech-projects"><i class="bi bi-github"></i> Tech Projects</a></li>
+                            <li><a class="dropdown-item" href="#other-projects"><i class="bi bi-folder"></i> Other Projects</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">
+                            <i class="bi bi-chat-quote"></i> Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#qr-code">
+                            <i class="bi bi-qr-code-scan"></i> QR
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </nav>
+
+    <main class="container py-5">
+        <!-- HOME SECTION - PROFILE -->
+        <section id="home" class="mb-5">
+            <article class="profile-container">
+                <section class="row align-items-center g-5">
+                    <figure class="col-12 col-md-4 text-center">
+                        <img src="./imagenes/imagen1.jpeg" alt="Nicol Gonzalez Alba" class="profile-img img-fluid">
+                    </figure>
+                    <article class="col-12 col-md-8">
+                        <h1 class="display-3 fw-bold" style="color: var(--title-color);">Nicol Gonzalez Alba</h1>
+                        <h4 class="text-muted mb-4">
+                            <i class="bi bi-bug" style="color: var(--secondary-blue);"></i> 
+                            QC Trainee at Globant | Student at CESDE
+                        </h4>
+                        <p class="lead">Passionate about software quality and test automation. Currently designing and executing test cases for Colsubsidio.</p>
+                        
+                        <!-- Skills badges -->
+                        <section class="d-flex flex-wrap gap-2 mt-4">
+                            <span class="badge-tech"><i class="bi bi-bug"></i> QA Testing/Rest Assured</span>
+                            <span class="badge-tech"><i class="bi bi-arrow-repeat"></i> SQL</span>
+                            <span class="badge-tech"><i class="bi bi-filetype-java"></i> Java/JavaScript</span>
+                            <span class="badge-tech"><i class="bi bi-filetype-py"></i> Python</span>
+                            <span class="badge-tech"><i class="bi bi-android"></i> Android Studio</span>
+                            <span class="badge-tech"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+                            <span class="badge-tech"><i class="bi bi-filetype-html"></i> HTML</span>
+                            <span class="badge-tech"><i class="bi bi-filetype-css"></i> CSS</span>
+                            <span class="badge-tech"><i class="bi bi-kanban"></i> Scrum</span>
+                        </section>
+                        
+                        <!-- Action buttons -->
+                        <section class="d-flex gap-3 mt-4">
+                            <a href="#contact" class="btn-contact">Contact me</a>
+                            <a href="#tech-projects" class="btn-custom-outline">View projects</a>
+                        </section>
+                    </article>
+                </section>
+            </article>
+        </section>
+
+        <!-- ABOUT ME SECTION - WITH ACCORDION -->
+        <section id="about" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-person-badge"></i> About me
+            </h2>
+            
+            <section class="row">
+                <article class="col-12">
+                    <article class="card-modern p-4">
+                        <section class="row g-4">
+                            <article class="col-12 col-md-7">
+                                <p class="fs-5">
+                                    <span class="highlight-text">Hello!</span> I'm <strong>Nicol González Alba</strong>, passionate about technology with a unique profile: 
+                                    <strong class="highlight-text">Agroindustrial Engineer</strong> and currently studying 
+                                    <strong class="highlight-text">Systems Technician</strong> at CESDE.
+                                </p>
+                                <p>At <strong>Globant</strong>, as a <strong>QC Trainee</strong> assigned to the <strong>Colsubsidio</strong> project, I found my passion for ensuring software quality. I design test cases, execute manual tests, and am learning automation with Rest Assured.</p>
+                                <p>My engineering background gave me analytical and methodological skills that I now apply in the testing world. I love finding bugs and contributing to making software products better every day.</p>
+                                
+                                <!-- Quick badges -->
+                                <section class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="badge-tech"><i class="bi bi-bug"></i> QA Testing</span>
+                                    <span class="badge-tech"><i class="bi bi-arrow-repeat"></i> Rest Assured</span>
+                                    <span class="badge-tech"><i class="bi bi-kanban"></i> Scrum</span>
+                                </section>
+                            </article>
+                            
+                            <article class="col-12 col-md-5">
+                                <!-- SKILLS ACCORDION -->
+                                <section class="accordion accordion-flush" id="skillsAccordion">
+                                    <!-- Technical Skills -->
+                                    <article class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTechnical" aria-expanded="true">
+                                                <i class="bi bi-tools text-primary me-2"></i> Technical Skills
+                                            </button>
+                                        </h2>
+                                        <article id="collapseTechnical" class="accordion-collapse collapse show" data-bs-parent="#skillsAccordion">
+                                            <article class="accordion-body">
+                                                <ul class="skill-list">
+                                                    <li><i class="bi bi-bug"></i> Manual and Automation QA</li>
+                                                    <li><i class="bi bi-arrow-repeat"></i> Rest Assured</li>
+                                                    <li><i class="bi bi-filetype-java"></i> Java / JavaScript / Python</li>
+                                                    <li><i class="bi bi-bootstrap"></i> Bootstrap 5</li>
+                                                    <li><i class="bi bi-database"></i> SQL</li>
+                                                    <li><i class="bi bi-android"></i> Android Studio</li>
+                                                    <li><i class="bi bi-filetype-html"></i> HTML5 / CSS3</li>
+                                                </ul>
+                                            </article>
+                                        </article>
+                                    </article>
+                                    
+                                    <!-- Soft Skills -->
+                                    <article class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSoft" aria-expanded="false">
+                                                <i class="bi bi-people-fill text-primary me-2"></i> Soft Skills
+                                            </button>
+                                        </h2>
+                                        <article id="collapseSoft" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                            <article class="accordion-body">
+                                                <ul class="skill-list">
+                                                    <li><i class="bi bi-people"></i> Teamwork</li>
+                                                    <li><i class="bi bi-chat-dots"></i> Effective Communication</li>
+                                                    <li><i class="bi bi-lightbulb"></i> Analytical Thinking</li>
+                                                    <li><i class="bi bi-arrow-repeat"></i> Adaptability</li>
+                                                    <li><i class="bi bi-puzzle"></i> Problem Solving</li>
+                                                    <li><i class="bi bi-book"></i> Continuous Learning</li>
+                                                </ul>
+                                            </article>
+                                        </article>
+                                    </article>
+                                    
+                                    <!-- Languages -->
+                                    <article class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLanguages" aria-expanded="false">
+                                                <i class="bi bi-translate text-primary me-2"></i> Languages
+                                            </button>
+                                        </h2>
+                                        <article id="collapseLanguages" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                            <article class="accordion-body">
+                                                <ul class="skill-list">
+                                                    <li><i class="bi bi-flag"></i> Spanish (Native)</li>
+                                                    <li><i class="bi bi-flag"></i> English (Basic)</li>
+                                                </ul>
+                                            </article>
+                                        </article>
+                                    </article>
+                                </section>
+                            </article>
+                        </section>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-laptop"></i> Education
+            </h2>
+            
+            <section class="row g-4">
+                <!-- Card 1 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern h-100">
+                        <header class="card-header-custom">
+                            <i class="bi bi-laptop"></i>
+                            <h3 class="h5 mb-0">Systems Technician</h3>
+                        </header>
+                        <article class="p-4">
+                            <p class="text-muted mb-2">
+                                <i class="bi bi-building"></i> CESDE | 2025 - Present
+                            </p>
+                            <p>Student of Systems Technician with basic knowledge in web and mobile programming, database management, data analysis, and agile methodologies.</p>
+                            <section class="d-flex flex-wrap gap-2">
+                                <span class="badge-tech small"><i class="bi bi-code"></i> Programming</span>
+                                <span class="badge-tech small"><i class="bi bi-database"></i> Databases</span>
+                                <span class="badge-tech small"><i class="bi bi-kanban"></i> Agile Methodologies</span>
+                                <span class="badge-tech small"><i class="bi bi-bar-chart"></i> Data Analysis</span>
+                            </section>
+                        </article>
+                    </article>
+                </article>
+                
+                <!-- Card 2 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern h-100">
+                        <header class="card-header-custom" style="background: linear-gradient(135deg, #16a085, #1abc9c);">
+                            <i class="bi bi-tree"></i>
+                            <h3 class="h5 mb-0">Agroindustrial Engineering</h3>
+                        </header>
+                        <article class="p-4">
+                            <p class="text-muted mb-2">
+                                <i class="bi bi-building"></i> Universidad de los Llanos | 2016 - 2023
+                            </p>
+                            <p>Agroindustrial Engineer with knowledge in quality control and Good Manufacturing Practices (GMP), interested in process improvement and quality assurance in the agroindustrial industry.</p>
+                            <section class="d-flex flex-wrap gap-2">
+                                <span class="badge-tech small"><i class="bi bi-search"></i> Research</span>
+                                <span class="badge-tech small"><i class="bi bi-gear"></i> Quality Assurance</span>
+                                <span class="badge-tech small"><i class="bi bi-file-text"></i> Resolution 2674 of 2013</span>
+                            </section>
+                        </article>
+                    </article>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern h-100">
+                        <header class="card-header-custom" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
+                            <i class="bi bi-globe"></i>
+                            <h3 class="h5 mb-0">Environmental Management Technician</h3>
+                        </header>
+                        <article class="p-4">
+                            <p class="text-muted mb-2">
+                                <i class="bi bi-building"></i> SENA | 2015
+                            </p>
+                            <p>Environmental Management Technician with knowledge in environmental management, conservation of natural resources, and support in implementing programs aimed at environmental protection and sustainable development.</p>
+                            <section class="d-flex flex-wrap gap-2">
+                                <span class="badge-tech small"><i class="bi bi-globe"></i> Environmental Management</span>
+                                <span class="badge-tech small"><i class="bi bi-droplet"></i> Natural Resources</span>
+                                <span class="badge-tech small"><i class="bi bi-check-circle"></i> Sustainable Development</span>
+                            </section>
+                        </article>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-file-earmark-pdf"></i> Certifications
+            </h2>
+            
+            <section class="row g-4">
+                <!-- Certification 1 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern">
+                        <figure>
+                            <img src="https://www.universitatcarlemany.com/sites/universitatcarlemany.com/files/images/imgi_60_higiene-alimentaria-en-que-consisteix-objectius-i-beneficis-0.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Good Manufacturing Practices">
+                        </figure>
+                        <article class="p-3">
+                            <h5 class="h6">GMP Application in Food and Beverage Industry</h5>
+                            <p class="text-muted small"><i class="bi bi-building"></i> SENA, 2020</p>
+                            <p class="small">Certification in GMP Application in the food and beverage industry, focused on quality assurance, safety, and proper handling in production processes.</p>
+                            <a href="https://drive.google.com/file/d/1M90EaoKyvY2yGj6E6DrWEZMt1zGZh9_4/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View Certificate</a>
+                        </article>
+                    </article>
+                </article>
+                
+                <!-- Certification 2 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern">
+                        <figure>
+                            <img src="https://radio.uchile.cl/wp-content/uploads/2025/10/Soberania-Alimentaria.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Food Safety">
+                        </figure>
+                        <article class="p-3">
+                            <h5 class="h6">Food Safety</h5>
+                            <p class="text-muted small"><i class="bi bi-building"></i> National Autonomous University of Mexico - COURSERA, 2020</p>
+                            <p class="small">Certification in Food Safety, focused on practices and strategies to ensure food quality, safety, and availability.</p>
+                            <a href="https://drive.google.com/file/d/1L1_0XyuaqhmclcF_gjLlU4dwDMJNWPPW/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View certificate</a>
+                        </article>
+                    </article>
+                </article>
+                
+                <!-- Certification 3 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern">
+                        <figure>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxA6KerviPCNP7dMMebe5tqMUL3XF5ejgfA&s" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Statistics and Probability">
+                        </figure>
+                        <article class="p-3">
+                            <h5 class="h6">Statistics and Probability</h5>
+                            <p class="text-muted small"><i class="bi bi-building"></i> National Autonomous University of Mexico - COURSERA, 2020</p>
+                            <p class="small">Certification in Statistics and Probability, focused on developing skills for data analysis, interpretation, and representation to support decision-making.</p>
+                            <a href="https://drive.google.com/file/d/10p86UH3aIRv75JqXGrRrv4KWi5SOOur_/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View certificate</a>
+                        </article>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-briefcase"></i> Experience
+            </h2>
+            
+            <article class="card-modern p-4">
+                <!-- Experience 1 -->
+                <article class="experience-item">
+                    <i class="bi bi-code-square"></i>
+                    <section class="row">
+                        <article class="col-12 col-md-3">
+                            <strong>2025 - Present</strong>
+                        </article>
+                        <article class="col-12 col-md-9">
+                            <h4 class="h5 mb-1">QC Trainee at Globant</h4>
+                            <p class="text-muted mb-2">Assigned to Colsubsidio</p>
+                            <p class="small">Design and execution of test cases, automation with Rest Assured, documentation of results, and bug reporting.</p>
+                        </article>
+                    </section>
+                </article>
+
+                <!-- Experience 2 -->
+                <article class="experience-item">
+                    <i class="bi bi-building"></i>
+                    <section class="row">
+                        <article class="col-12 col-md-3">
+                            <strong>2023 - 2024</strong>
+                        </article>
+                        <article class="col-12 col-md-9">
+                            <h4 class="h5 mb-1">Agroindustrial Engineer - Quality</h4>
+                            <p class="text-muted mb-2">Universal Ingenieros de Alimentos</p>
+                            <p class="small">Supervision and personnel management, preparation of nutritional labeling, technical sheets, and GMP manuals, project formulation for client companies, and PQR management.</p>
+                        </article>
+                    </section>
+                </article>
+
+                <!-- Experience 3 -->
+                <article class="experience-item">
+                    <i class="bi bi-mortarboard"></i>
+                    <section class="row">
+                        <article class="col-12 col-md-3">
+                            <strong>2021 - 2022</strong>
+                        </article>
+                        <article class="col-12 col-md-9">
+                            <h4 class="h5 mb-1">University Intern</h4>
+                            <p class="text-muted mb-2">JC Asesorías y Servicios</p>
+                            <p class="small">Planning and execution of training for food handlers and monitoring the implementation of basic sanitation plans in school feeding programs.</p>
+                        </article>
+                    </section>
+                </article>
+            </article>
+        </section>
+
+        <!-- TECH PROJECTS SECTION - DESKTOP VERSION (3 CARDS PER SLIDE) -->
+        <section id="tech-projects" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-github"></i> Tech Projects
+            </h2>
+            
+            <!-- Desktop Version: 3 cards per slide -->
+            <div class="desktop-only">
+                <section id="carouselDesktop" class="carousel slide carousel-proyectos" data-bs-ride="false">
+                    <section class="carousel-inner">
+                        <!-- Slide 1: Projects 1,2,3 -->
+                        <article class="carousel-item active">
+                            <div class="row g-4">
+                                <!-- Project 1 -->
+                                <div class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Personal Diary - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Personal Diary</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-android"></i> Android Studio</p>
+                                            <p class="small">Mobile diary application designed to record thoughts, emotions, and daily experiences.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-android"></i> Android Studio</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/DiarioPersonal.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                                <!-- Project 2 -->
+                                <div class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Carreras Sport - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Carreras Sport</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Informational Website</p>
+                                            <p class="small">Informational website about Formula 1 offering news, analysis, and exclusive content for subscribers.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/CarrerasSport.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                                <!-- Project 3 -->
+                                <div class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="DondeComo - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">DondeComo</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Web App</p>
+                                            <p class="small">Website with information about restaurants, including location, description, and available services.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/DondeComo.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Slide 2: Projects 4,5,6 -->
+                        <article class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Project 4 -->
+                                <div class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Mythological Creatures - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Mythological Creatures</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-java"></i> Java</p>
+                                            <p class="small">Algorithm implemented with inheritance, interfaces, and polymorphism to demonstrate object-oriented programming principles.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-java"></i> Java</span>
+                                                <span class="badge-tech small"><i class="bi bi-diagram-3"></i> OOP</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/NicolJava.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                                <!-- Project 5 -->
+                                <div class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Python Calculator - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Python Calculator</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-py"></i> Python/Tkinter</p>
+                                            <p class="small">Calculator developed with a graphical interface to facilitate user interaction.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-py"></i> Python</span>
+                                                <span class="badge-tech small"><i class="bi bi-window"></i> Tkinter</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/Calculadora_NicolGonzalez.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                                <!-- Project 6 -->
+                                <div class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Flowchart - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Process Flowchart</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-py"></i> Python/Matplotlib</p>
+                                            <p class="small">Flowchart of a parking lot's operation.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-py"></i> Python</span>
+                                                <span class="badge-tech small"><i class="bi bi-bar-chart"></i> Matplotlib</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/Practica_M3.2_Diagrama_flujo_parking_NicolGonzalez.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    
+                    <!-- Carousel controls (arrows) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDesktop" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDesktop" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </section>
+                
+                <!-- Carousel indicators (dots) -->
+                <section class="d-flex justify-content-center gap-2 mt-3">
+                    <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="0" class="active" style="width: 10px; height: 10px; border-radius: 50%; border: none; background: var(--secondary-blue); padding: 0;" aria-label="Go to page 1"></button>
+                    <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="1" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Go to page 2"></button>
+                </section>
+            </div>
+            
+            <!-- Mobile Version: 1 card per slide (6 slides) -->
+            <div class="mobile-only">
+                <section id="carouselMobile" class="carousel slide carousel-proyectos" data-bs-ride="false">
+                    <section class="carousel-inner">
+                        <!-- Slide 1: Project 1 -->
+                        <article class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Personal Diary - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Personal Diary</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-android"></i> Android Studio</p>
+                                            <p class="small">Mobile diary application designed to record thoughts, emotions, and daily experiences.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-android"></i> Android Studio</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/DiarioPersonal.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Slide 2: Project 2 -->
+                        <article class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Carreras Sport - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Carreras Sport</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Informational Website</p>
+                                            <p class="small">Informational website about Formula 1 offering news, analysis, and exclusive content for subscribers.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/CarrerasSport.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Slide 3: Project 3 -->
+                        <article class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="DondeComo - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">DondeComo</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Web App</p>
+                                            <p class="small">Website with information about restaurants, including location, description, and available services.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/DondeComo.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Slide 4: Project 4 -->
+                        <article class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Mythological Creatures - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Mythological Creatures</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-java"></i> Java</p>
+                                            <p class="small">Algorithm implemented with inheritance, interfaces, and polymorphism to demonstrate object-oriented programming principles.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-java"></i> Java</span>
+                                                <span class="badge-tech small"><i class="bi bi-diagram-3"></i> OOP</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/NicolJava.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Slide 5: Project 5 -->
+                        <article class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Python Calculator - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Python Calculator</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-py"></i> Python/Tkinter</p>
+                                            <p class="small">Calculator developed with a graphical interface to facilitate user interaction.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-py"></i> Python</span>
+                                                <span class="badge-tech small"><i class="bi bi-window"></i> Tkinter</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/Calculadora_NicolGonzalez.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Slide 6: Project 6 -->
+                        <article class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Flowchart - GitHub">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Process Flowchart</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-py"></i> Python/Matplotlib</p>
+                                            <p class="small">Flowchart of a parking lot's operation.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-py"></i> Python</span>
+                                                <span class="badge-tech small"><i class="bi bi-bar-chart"></i> Matplotlib</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/Practica_M3.2_Diagrama_flujo_parking_NicolGonzalez.git" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> View repository</a>
+                                        </article>
+                                    </article>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    
+                    <!-- Carousel controls (arrows) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </section>
+                
+                <!-- Carousel indicators (dots) -->
+                <section class="d-flex justify-content-center gap-2 mt-3">
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="0" class="active" style="width: 10px; height: 10px; border-radius: 50%; border: none; background: var(--secondary-blue); padding: 0;" aria-label="Go to page 1"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="1" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Go to page 2"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="2" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Go to page 3"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="3" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Go to page 4"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="4" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Go to page 5"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="5" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Go to page 6"></button>
+                </section>
+            </div>
+        </section>
+
+        <!-- OTHER PROJECTS SECTION -->
+        <section id="other-projects" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-folder"></i> Other Projects
+            </h2>
+            
+            <section class="row g-4">
+                <!-- Card 1 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern">
+                        <figure>
+                            <img src="https://www.utadeo.edu.co/sites/tadeo/files/styles/internal_517x290/public/node/news/field_images/imagen_capacitacion_villavicencio.jpg?itok=uVnAC8W-" class="card-img-top" style="height: 180px; object-fit: cover;" alt="GMP Trainings">
+                        </figure>
+                        <article class="p-3">
+                            <h5 class="h6">GMP Trainings</h5>
+                            <p class="text-muted small"><i class="bi bi-building"></i> Universal Ingenieros de Alimentos - 2023</p>
+                            <p class="small">Utadeo, through consulting with the company Universal Ingenieros de Alimentos, trained entrepreneurs from the baking industry in the Llanos region.</p>
+                            <a href="https://www.utadeo.edu.co/es/noticia/destacadas/ciencias-naturales-e-ingenieria/36/utadeo-capacita-empresarios-de-los-llanos-orientales-en-buenas-practicas-de-manufactura" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-newspaper"></i> View news</a>
+                        </article>
+                    </article>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern">
+                        <figure>
+                            <img src="https://i.ytimg.com/vi/RqmPLEawDrQ/maxresdefault.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Thesis">
+                        </figure>
+                        <article class="p-3">
+                            <h5 class="h6">Thesis</h5>
+                            <p class="text-muted small"><i class="bi bi-building"></i> Universidad de los Llanos, 2023</p>
+                            <p class="small">Design of Good Manufacturing Practices Documentation for the Company "El Mundo de los Lácteos CF S.A.S." in Chiquinquirá, Boyacá.</p>
+                            <a href="https://drive.google.com/file/d/171VwLNNHqhNli4D5ijAxT3XefdNSiu0W/view?usp=sharing" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-file-pdf"></i> View PDF</a>
+                        </article>
+                    </article>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="col-12 col-md-4">
+                    <article class="card-modern">
+                        <figure>
+                            <img src="https://media.istockphoto.com/id/1095478444/es/foto/aceite-esencial-de-ortiga-y-ramas-frescas-flor-de-ortiga.jpg?s=170667a&w=0&k=20&c=LZKCkK76KHhggRnexOuC99cIM_r673vHjFvMVyOh66w=" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Experimental Work">
+                        </figure>
+                        <article class="p-3">
+                            <h5 class="h6">Experimental Work</h5>
+                            <p class="text-muted small"><i class="bi bi-building"></i> Universidad de los Llanos - 2019</p>
+                            <p class="small">Physicochemical analysis of nettle leaf essential oil, extracted by steam distillation and microwave-assisted hydrodistillation, evaluating its chemical and physical properties.</p>
+                            <a href="https://drive.google.com/file/d/1bKux-uKjBDCyhLEqXr6Z9xNnZLfEnaQ9/view?usp=sharing" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-file-pdf"></i> View PDF</a>
+                        </article>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-chat-quote"></i> Testimonials
+            </h2>
+            
+            <section class="row g-4">
+                <!-- Testimonial 1 -->
+                <article class="col-12 col-md-4">
+                    <article class="testimonio-card">
+                        <i class="bi bi-quote"></i>
+                        <header class="text-center">
+                            <img src="./imagenes/imagen2.jpeg" alt="Wilmar López" class="testimonio-img">
+                            <h5 class="h6 mb-1">Wilmar López</h5>
+                            <p class="text-muted small">Colleague at Globant and CESDE</p>
+                        </header>
+                        <blockquote class="text-center mt-3">
+                            <p>"Nicol is an exceptional professional. Her dedication to testing and her ability to find bugs is impressive. Always willing to help and learn."</p>
+                        </blockquote>
+                    </article>
+                </article>
+                
+                <!-- Testimonial 2 -->
+                <article class="col-12 col-md-4">
+                    <article class="testimonio-card">
+                        <i class="bi bi-quote"></i>
+                        <header class="text-center">
+                            <img src="./imagenes/imagen3.jpeg" alt="Yudnaris Prado" class="testimonio-img">
+                            <h5 class="h6 mb-1">Yudnaris Prado</h5>
+                            <p class="text-muted small">Colleague at Globant and CESDE</p>
+                        </header>
+                        <blockquote class="text-center mt-3">
+                            <p>"Excellent work in test case execution. Nicol has shown great commitment and attention to detail in every assigned project."</p>
+                        </blockquote>
+                    </article>
+                </article>
+                
+                <!-- Testimonial 3 -->
+                <article class="col-12 col-md-4">
+                    <article class="testimonio-card">
+                        <i class="bi bi-quote"></i>
+                        <header class="text-center">
+                            <img src="https://ca.slack-edge.com/E02KLGDBF9B-U08Q1NGJTHA-a670105e3c60-192" alt="Erika Arevalo" class="testimonio-img">
+                            <h5 class="h6 mb-1">Erika Arevalo</h5>
+                            <p class="text-muted small">Colleague at Globant and CESDE</p>
+                        </header>
+                        <blockquote class="text-center mt-3">
+                            <p>"An outstanding person. Her passion for technology and her ability to solve complex problems make her stand out in her work."</p>
+                        </blockquote>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- QR CODE SECTION -->
+        <section id="qr-code" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-qr-code-scan"></i> Share my portfolio
+            </h2>
+            
+            <section class="row">
+                <article class="col-12 col-md-6 col-lg-4 mx-auto text-center">
+                    <div class="card-modern p-4">
+                        <div id="qrcode" class="mb-3"></div>
+                        <h5 class="h6 mb-2">Scan to view my portfolio</h5>
+                        <p class="small text-muted">Or visit: <span id="currentUrl"></span></p>
+                        <button class="btn-custom-outline btn-sm" onclick="downloadQR()">
+                            <i class="bi bi-download"></i> Download QR
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-envelope"></i> Contact
+            </h2>
+            
+            <section class="row">
+                <article class="col-12 col-lg-8 mx-auto">
+                    <article class="card-modern p-4">
+                        <section class="row g-4">
+                            <article class="col-12 col-md-6">
+                                <a href="mailto:ingnicolalba@gmail.com" class="text-decoration-none">
+                                    <article class="d-flex align-items-center gap-3 p-3 bg-light rounded-4">
+                                        <i class="bi bi-envelope-fill fs-1" style="color: var(--secondary-blue);"></i>
+                                        <article>
+                                            <h6 class="mb-0">Email</h6>
+                                            <p class="mb-0 text-muted">ingnicolalba@gmail.com</p>
+                                        </article>
+                                    </article>
+                                </a>
+                            </article>
+                            <article class="col-12 col-md-6">
+                                <a href="tel:+573142671955" class="text-decoration-none">
+                                    <article class="d-flex align-items-center gap-3 p-3 bg-light rounded-4">
+                                        <i class="bi bi-telephone-fill fs-1" style="color: var(--secondary-blue);"></i>
+                                        <article>
+                                            <h6 class="mb-0">Phone</h6>
+                                            <p class="mb-0 text-muted">+57 314 267 1955</p>
+                                        </article>
+                                    </article>
+                                </a>
+                            </article>
+                        </section>
+                        
+                        <hr class="my-4">
+                        
+                        <footer class="text-center">
+                            <h5 class="mb-3">Want to contact me?</h5>
+                            <button class="btn-custom-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                <i class="bi bi-send me-2"></i>Send message
+                            </button>
+                        </footer>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-custom text-center">
+            <section class="container">
+                <p class="mb-2">© 2026 Nicol Alba - QC Trainee & Systems Student</p>
+            </section>
+        </footer>
+    </main>
+
+    <!-- CONTACT MODAL -->
+    <article class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-centered">
+            <section class="modal-content">
+                <header class="modal-header" style="background: linear-gradient(135deg, var(--primary-blue), var(--dark-gray)); color: white;">
+                    <h5 class="modal-title" id="contactModalLabel"><i class="bi bi-envelope me-2"></i>Send message</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </header>
+                <article class="modal-body">
+                    <form>
+                        <article class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name">
+                        </article>
+                        <article class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="your@email.com">
+                        </article>
+                        <article class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="How can I help you?"></textarea>
+                        </article>
+                    </form>
+                </article>
+                <footer class="modal-footer">
+                    <button type="button" class="btn-custom-outline" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn-custom-primary">Send</button>
+                </footer>
+            </section>
+        </section>
+    </article>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        // Script to change hamburger menu icon (☰ ↔ ✕)
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            if (navbarToggler && navbarCollapse) {
+                navbarCollapse.addEventListener('show.bs.collapse', function() {
+                    navbarToggler.innerHTML = '<i class="bi bi-x-lg"></i>';
+                });
+                
+                navbarCollapse.addEventListener('hide.bs.collapse', function() {
+                    navbarToggler.innerHTML = '<i class="bi bi-list"></i>';
+                });
+            }
+        });
+
+        // Script to toggle dark/light mode
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const languageToggle = document.getElementById('languageToggle');
+            const languageText = document.getElementById('languageText');
+            
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeIcon.classList.remove('bi-sun');
+                themeIcon.classList.add('bi-moon');
+            } else if (savedTheme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                themeIcon.classList.remove('bi-moon');
+                themeIcon.classList.add('bi-sun');
+            }
+            
+            if (!savedTheme) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (prefersDark) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeIcon.classList.remove('bi-sun');
+                    themeIcon.classList.add('bi-moon');
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+            
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    
+                    if (currentTheme === 'dark') {
+                        document.documentElement.removeAttribute('data-theme');
+                        themeIcon.classList.remove('bi-moon');
+                        themeIcon.classList.add('bi-sun');
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        themeIcon.classList.remove('bi-sun');
+                        themeIcon.classList.add('bi-moon');
+                        localStorage.setItem('theme', 'dark');
+                    }
+                });
+            }
+
+            // Language toggle
+            if (languageToggle) {
+                languageToggle.addEventListener('click', function() {
+                    if (window.location.pathname.includes('index-en.html')) {
+                        window.location.href = 'index.html';
+                    } else {
+                        window.location.href = 'index-en.html';
+                    }
+                });
+            }
+
+            // Display current URL
+            const currentUrlElement = document.getElementById('currentUrl');
+            if (currentUrlElement) {
+                currentUrlElement.textContent = window.location.href;
+            }
+            
+            // Generate QR
+            const qrcodeElement = document.getElementById("qrcode");
+            if (qrcodeElement) {
+                new QRCode(qrcodeElement, {
+                    text: window.location.href,
+                    width: 200,
+                    height: 200,
+                    colorDark : "#2c3e50",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+            }
+            
+            // Function to download QR
+            window.downloadQR = function() {
+                const canvas = document.querySelector('#qrcode canvas');
+                if (canvas) {
+                    const link = document.createElement('a');
+                    link.download = 'portfolio-nicolalba-qr.png';
+                    link.href = canvas.toDataURL();
+                    link.click();
+                }
+            };
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
