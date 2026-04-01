@@ -653,6 +653,69 @@
             background-color: #f5f5f5 !important;
         }
 
+        /* Modal para ampliar certificados */
+        .modal-certificado {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-certificado-content {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .modal-certificado-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+        
+        .modal-certificado-caption {
+            text-align: center;
+            color: white;
+            padding: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        .modal-certificado-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 10000;
+        }
+        
+        .modal-certificado-close:hover {
+            color: var(--secondary-blue);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Ajuste para modo oscuro */
+        [data-theme="dark"] .modal-certificado {
+            background-color: rgba(0,0,0,0.95);
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .container {
@@ -1206,6 +1269,68 @@
                             <p class="text-muted small"><i class="bi bi-building"></i> Universidad Nacional Autónoma de México - COURSERA, 2020</p>
                             <p class="small">Certificación en Estadística y Probabilidad, enfocada en el desarrollo de habilidades para el análisis, interpretación y representación de datos para apoyar la toma de decisiones.</p>
                             <a href="https://drive.google.com/file/d/10p86UH3aIRv75JqXGrRrv4KWi5SOOur_/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> Ver certificado</a>
+                        </article>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- SECCIÓN CERTIFICADOS CESDE -->
+        <section id="certificados-cesde" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-award"></i> Certificados CESDE
+            </h2>
+            <p class="text-muted mb-4">Certificados obtenidos durante mi formación en el CESDE</p>
+            
+            <section class="row g-4">
+                <!-- Certificado 1 -->
+                <article class="col-6 col-md-4 col-lg-3">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('https://via.placeholder.com/800x600?text=Certificado+CESDE+1', 'Certificado Programación Web')">
+                        <figure>
+                            <img src="./imagenes/catedra ser emprendedor.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Certificado Programación Web">
+                        </figure>
+                        <article class="mt-2">
+                            <h5 class="h6 mb-1">Catedra Ser Emprendedor</h5>
+                            <p class="small text-muted mb-0">CESDE - 2025</p>
+                        </article>
+                    </article>
+                </article>
+                
+                <!-- Certificado 2 -->
+                <article class="col-6 col-md-4 col-lg-3">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('https://via.placeholder.com/800x600?text=Certificado+CESDE+2', 'Certificado Bases de Datos')">
+                        <figure>
+                            <img src="./imagenes/gestion de las emocioness.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Certificado Bases de Datos">
+                        </figure>
+                        <article class="mt-2">
+                            <h5 class="h6 mb-1">Gestión de las emociones</h5>
+                            <p class="small text-muted mb-0">CESDE - 2025</p>
+                        </article>
+                    </article>
+                </article>
+                
+                <!-- Certificado 3 -->
+                <article class="col-6 col-md-4 col-lg-3">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('https://via.placeholder.com/800x600?text=Certificado+CESDE+3', 'Certificado QA Testing')">
+                        <figure>
+                            <img src="./imagenes/redaccion y ortografia.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Certificado QA Testing">
+                        </figure>
+                        <article class="mt-2">
+                            <h5 class="h6 mb-1">Redacción y ortografía</h5>
+                            <p class="small text-muted mb-0">CESDE - 2026</p>
+                        </article>
+                    </article>
+                </article>
+                
+                <!-- Certificado 4 -->
+                <article class="col-6 col-md-4 col-lg-3">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('https://via.placeholder.com/800x600?text=Certificado+CESDE+4', 'Certificado Scrum')">
+                        <figure>
+                            <img src="./imagenes/excel desde cero.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Certificado Scrum">
+                        </figure>
+                        <article class="mt-2">
+                            <h5 class="h6 mb-1">Excel desde cero</h5>
+                            <p class="small text-muted mb-0">CESDE - 2026</p>
                         </article>
                     </article>
                 </article>
@@ -1821,6 +1946,48 @@
             </section>
         </section>
     </article>
+
+    <!-- Script para modal de certificados -->
+    <script>
+        function openModal(imageUrl, title) {
+            // Crear el modal
+            const modal = document.createElement('section');
+            modal.className = 'modal-certificado';
+            modal.innerHTML = `
+                <article class="modal-certificado-content">
+                    <span class="modal-certificado-close">&times;</span>
+                    <img src="${imageUrl}" class="modal-certificado-img" alt="${title}">
+                    <p class="modal-certificado-caption">${title}</p>
+                </article>
+            `;
+            
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+            
+            // Cerrar modal al hacer clic en la X
+            const closeBtn = modal.querySelector('.modal-certificado-close');
+            closeBtn.onclick = function() {
+                modal.remove();
+            };
+            
+            // Cerrar modal al hacer clic fuera de la imagen
+            modal.onclick = function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            };
+            
+            // Cerrar con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const existingModal = document.querySelector('.modal-certificado');
+                    if (existingModal) {
+                        existingModal.remove();
+                    }
+                }
+            });
+        }
+    </script>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
