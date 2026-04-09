@@ -1271,10 +1271,10 @@
             </section>
         </section>
 
-        <!-- CESDE CERTIFICATES SECTION -->
+        <!-- CESDE CERTIFICATES SECTION (5 certificates) -->
         <section id="cesde-certificates" class="mb-5">
             <h2 class="section-title">
-                <i class="bi bi-award"></i> CESDE Certifications
+                <i class="bi bi-award"></i> CESDE Certificates
             </h2>
     
             <section class="row g-4">
@@ -1326,6 +1326,19 @@
                         <article class="mt-2">
                             <h5 class="h6 mb-1">Excel from Scratch</h5>
                             <p class="small text-muted mb-0">CESDE - 2026</p>
+                        </article>
+                    </article>
+                </article>
+
+                <!-- Certificate 5 -->
+                <article class="col-6 col-md-4 col-lg-3">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/tablas y graficos dinamicos.jpg', 'Dynamic tables and charts for data management')">
+                        <figure>
+                            <img src="./imagenes/tablas y graficos dinamicos.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Dynamic tables and charts for data management Certificate">
+                        </figure>
+                        <article class="mt-2">
+                            <h5 class="h6 mb-1">Dynamic tables and charts for data management</h5>
+                            <p class="small text-muted mb-0">CESDE - 2025</p>
                         </article>
                     </article>
                 </article>
@@ -2049,13 +2062,8 @@
                 });
             }
 
+            // Language toggle
             if (languageToggle) {
-                if (window.location.pathname.includes('index-en.html')) {
-                    languageText.textContent = 'EN';
-                } else {
-                    languageText.textContent = 'ES';
-                }
-
                 languageToggle.addEventListener('click', function() {
                     if (window.location.pathname.includes('index-en.html')) {
                         window.location.href = 'index.html';
@@ -2065,11 +2073,13 @@
                 });
             }
 
+            // Display current URL
             const currentUrlElement = document.getElementById('currentUrl');
             if (currentUrlElement) {
                 currentUrlElement.textContent = window.location.href;
             }
             
+            // Generate QR
             const qrcodeElement = document.getElementById("qrcode");
             if (qrcodeElement) {
                 new QRCode(qrcodeElement, {
@@ -2082,6 +2092,7 @@
                 });
             }
             
+            // Function to download QR
             window.downloadQR = function() {
                 const canvas = document.querySelector('#qrcode canvas');
                 if (canvas) {
