@@ -1434,7 +1434,7 @@
             </article>
         </section>
 
-        <!-- SECCIÓN PROYECTOS TECNOLÓGICOS - VERSIÓN DESKTOP (3 TARJETAS POR SLIDE) -->
+        <!-- SECCIÓN PROYECTOS TECNOLÓGICOS - CON 9 PROYECTOS (3 NUEVOS: CAJAS, SPA LIBROS, EJERCICIOS REACT) -->
         <section id="proyectos" class="mb-5">
             <h2 class="section-title">
                 <i class="bi bi-github"></i> Proyectos Tecnológicos
@@ -1576,6 +1576,75 @@
                                 </article>
                             </section>
                         </article>
+
+                        <!-- Slide 3: Proyectos 7,8,9 (Cajas, SPA Libros, Ejercicios React) -->
+                        <article class="carousel-item">
+                            <section class="row g-4">
+                                <!-- Proyecto 7 - Cajas -->
+                                <article class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/2589/2589471.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Cajas - Proyecto CSS">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Cajas - Diseño CSS</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-browser-chrome"></i> HTML / CSS</p>
+                                            <p class="small">Proyecto de diseño web que demuestra el uso de cajas flexibles, posicionamiento y estilos CSS avanzados para crear layouts responsivos.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML5</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS3</span>
+                                                <span class="badge-tech small"><i class="bi bi-grid"></i> Flexbox</span>
+                                            </section>
+                                            <a href="https://niicolalba.github.io/cajas/" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> Ver proyecto</a>
+                                        </article>
+                                    </article>
+                                </article>
+                                <!-- Proyecto 8 - SPA Libros -->
+                                <article class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/174/174270.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="SPA Libros - React">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">SPA Libros</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-js"></i> React / Vite</p>
+                                            <p class="small">Aplicación de una sola página (SPA) para gestión de libros, con búsqueda, filtrado y visualización de detalles usando React y hooks.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> React</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                                <span class="badge-tech small"><i class="bi bi-search"></i> Hooks</span>
+                                            </section>
+                                            <a href="https://niicolalba.github.io/sap-libros/" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> Ver proyecto</a>
+                                        </article>
+                                    </article>
+                                </article>
+                                <!-- Proyecto 9 - Ejercicios Base React -->
+                                <article class="col-md-4">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Ejercicios Base React">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Ejercicios Base React</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-js"></i> React / Components</p>
+                                            <p class="small">Colección de ejercicios prácticos desarrollados con React para dominar los fundamentos de la librería.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> React</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> Components</span>
+                                                <span class="badge-tech small"><i class="bi bi-arrow-repeat"></i> State</span>
+                                            </section>
+                                            <a href="https://niicolalba.github.io/ejercicios-react/" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> Ver proyecto</a>
+                                        </article>
+                                    </article>
+                                </article>
+                            </section>
+                        </article>
                     </section>
                     
                     <!-- Controles del carrusel (flechas) -->
@@ -1593,10 +1662,11 @@
                 <section class="d-flex justify-content-center gap-2 mt-3">
                     <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="0" class="active" style="width: 10px; height: 10px; border-radius: 50%; border: none; background: var(--secondary-blue); padding: 0;" aria-label="Ir a página 1"></button>
                     <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="1" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 2"></button>
+                    <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="2" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 3"></button>
                 </section>
             </section>
             
-            <!-- Versión Móvil: 1 tarjeta por slide (6 slides) -->
+            <!-- Versión Móvil: 1 tarjeta por slide (9 slides) -->
             <section class="mobile-only">
                 <section id="carouselMobile" class="carousel slide carousel-proyectos" data-bs-ride="false">
                     <section class="carousel-inner">
@@ -1750,6 +1820,84 @@
                                 </article>
                             </section>
                         </article>
+
+                        <!-- Slide 7: NUEVO Proyecto 7 - Cajas -->
+                        <article class="carousel-item">
+                            <section class="row justify-content-center">
+                                <article class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/2589/2589471.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Cajas - Proyecto CSS">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Cajas - Diseño CSS</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-browser-chrome"></i> HTML / CSS</p>
+                                            <p class="small">Proyecto de diseño web que demuestra el uso de cajas flexibles, posicionamiento y estilos CSS avanzados para crear layouts responsivos.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML5</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS3</span>
+                                                <span class="badge-tech small"><i class="bi bi-grid"></i> Flexbox</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/Cajas" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> Ver repositorio</a>
+                                        </article>
+                                    </article>
+                                </article>
+                            </section>
+                        </article>
+
+                        <!-- Slide 8: NUEVO Proyecto 8 - SPA Libros -->
+                        <article class="carousel-item">
+                            <section class="row justify-content-center">
+                                <article class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/174/174270.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="SPA Libros - React">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">SPA Libros</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-js"></i> React / Vite</p>
+                                            <p class="small">Aplicación de una sola página (SPA) para gestión de libros, con búsqueda, filtrado y visualización de detalles usando React y hooks.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> React</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                                <span class="badge-tech small"><i class="bi bi-search"></i> Hooks</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/SPA-Libros" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> Ver repositorio</a>
+                                        </article>
+                                    </article>
+                                </article>
+                            </section>
+                        </article>
+
+                        <!-- Slide 9: NUEVO Proyecto 9 - Ejercicios Base React -->
+                        <article class="carousel-item">
+                            <section class="row justify-content-center">
+                                <article class="col-12">
+                                    <article class="card-modern">
+                                        <figure>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Ejercicios Base React">
+                                        </figure>
+                                        <article class="p-3">
+                                            <header class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="h6 mb-0">Ejercicios Base React</h5>
+                                            </header>
+                                            <p class="text-muted small"><i class="bi bi-filetype-js"></i> React / Components</p>
+                                            <p class="small">Colección de ejercicios fundamentales de React que incluyen componentes funcionales, estado, props, eventos y manejo de formularios.</p>
+                                            <section class="d-flex flex-wrap gap-1 mb-2">
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> React</span>
+                                                <span class="badge-tech small"><i class="bi bi-filetype-js"></i> Components</span>
+                                                <span class="badge-tech small"><i class="bi bi-arrow-repeat"></i> State</span>
+                                            </section>
+                                            <a href="https://github.com/NiicolAlba/Ejercicios-React" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-github"></i> Ver repositorio</a>
+                                        </article>
+                                    </article>
+                                </article>
+                            </section>
+                        </article>
                     </section>
                     
                     <!-- Controles del carrusel (flechas) -->
@@ -1763,14 +1911,17 @@
                     </button>
                 </section>
                 
-                <!-- Indicadores del carrusel (puntos) -->
-                <section class="d-flex justify-content-center gap-2 mt-3">
+                <!-- Indicadores del carrusel (puntos) para 9 slides -->
+                <section class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
                     <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="0" class="active" style="width: 10px; height: 10px; border-radius: 50%; border: none; background: var(--secondary-blue); padding: 0;" aria-label="Ir a página 1"></button>
                     <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="1" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 2"></button>
                     <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="2" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 3"></button>
                     <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="3" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 4"></button>
                     <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="4" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 5"></button>
                     <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="5" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 6"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="6" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 7"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="7" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 8"></button>
+                    <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="8" style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--secondary-blue); background: transparent; padding: 0;" aria-label="Ir a página 9"></button>
                 </section>
             </section>
         </section>
@@ -1806,7 +1957,7 @@
                         <article class="p-3">
                             <h5 class="h6">Trabajo de Grado</h5>
                             <p class="text-muted small"><i class="bi bi-building"></i> Universidad de los Llanos, 2023</p>
-                            <p class="small">Diseño de la Documentación de Buenas Prácticas de Manufactura para la Empresa “El Mundo de los Lácteos CF S.A.S.” en Chiquinquirá, Boyacá</p>
+                            <p class="small">Diseño de la Documentación de Buenas Prácticas de Manufactura para la Empresa "El Mundo de los Lácteos CF S.A.S." en Chiquinquirá, Boyacá</p>
                             <a href="https://drive.google.com/file/d/171VwLNNHqhNli4D5ijAxT3XefdNSiu0W/view?usp=sharing" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-file-pdf"></i> Ver PDF</a>
                         </article>
                     </article>
