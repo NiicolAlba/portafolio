@@ -380,7 +380,7 @@
             transform: translateY(-2px);
         }
 
-        /* Decorative floating icons */
+        /* Floating decorative icons */
         .floating-icon {
             position: absolute;
             opacity: 0.1;
@@ -900,14 +900,14 @@
             }
         }
 
-        /* Hide on desktop */
+        /* Class to hide elements on desktop */
         @media (min-width: 769px) {
             .mobile-only {
                 display: none;
             }
         }
 
-        /* Hide on mobile */
+        /* Class to hide elements on mobile */
         @media (max-width: 768px) {
             .desktop-only {
                 display: none;
@@ -917,7 +917,7 @@
     <title>Nicol Alba | Professional Portfolio</title>
 </head>
 <body>
-    <!-- Decorative floating icons -->
+    <!-- General floating decorative icons -->
     <i class="bi bi-bug floating-icon icon-1"></i>
     <i class="bi bi-code-slash floating-icon icon-2"></i>
     <i class="bi bi-diagram-3 floating-icon icon-3"></i>
@@ -933,12 +933,12 @@
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <section class="container">
             <section class="navbar-left-buttons">
-                <!-- Dark/Light mode button -->
+                <!-- Dark/light mode toggle button -->
                 <button class="theme-switch" id="themeToggle" aria-label="Toggle dark/light mode">
                     <i class="bi bi-sun" id="themeIcon"></i>
                 </button>
                 
-                <!-- Language button ES/EN -->
+                <!-- Language toggle button EN/ES -->
                 <button class="language-switch" id="languageToggle">
                     <span id="languageText">EN</span>
                 </button>
@@ -955,8 +955,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">
-                            <i class="bi bi-person"></i> About me
+                        <a class="nav-link" href="#about-me">
+                            <i class="bi bi-person"></i> About Me
                         </a>
                     </li>
                     
@@ -983,7 +983,7 @@
                             <i class="bi bi-code-square"></i> Projects
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#tech-projects"><i class="bi bi-github"></i> Tech Projects</a></li>
+                            <li><a class="dropdown-item" href="#projects"><i class="bi bi-github"></i> Tech Projects</a></li>
                             <li><a class="dropdown-item" href="#other-projects"><i class="bi bi-folder"></i> Other Projects</a></li>
                         </ul>
                     </li>
@@ -1039,8 +1039,8 @@
                         
                         <!-- Action buttons -->
                         <section class="d-flex gap-3 mt-4">
-                            <a href="#contact" class="btn-contact">Contact me</a>
-                            <a href="#tech-projects" class="btn-custom-outline">View projects</a>
+                            <a href="#contact" class="btn-contact">Contact Me</a>
+                            <a href="#projects" class="btn-custom-outline">View Projects</a>
                         </section>
                     </article>
                 </section>
@@ -1048,9 +1048,9 @@
         </section>
 
         <!-- ABOUT ME SECTION - WITH ACCORDION -->
-        <section id="about" class="mb-5">
+        <section id="about-me" class="mb-5">
             <h2 class="section-title">
-                <i class="bi bi-person-badge"></i> About me
+                <i class="bi bi-person-badge"></i> About Me
             </h2>
             
             <section class="row">
@@ -1059,12 +1059,12 @@
                         <section class="row g-4">
                             <article class="col-12 col-md-7">
                                 <p class="fs-5">
-                                    <span class="highlight-text">Hello!</span> I'm <strong>Nicol González Alba</strong>, passionate about technology with a unique profile: 
+                                    <span class="highlight-text">Hello!</span> I'm <strong>Nicol González Alba</strong>, a technology enthusiast with a unique profile: 
                                     <strong class="highlight-text">Agroindustrial Engineer</strong> and currently studying 
                                     <strong class="highlight-text">Systems Technician</strong> at CESDE.
                                 </p>
                                 <p>At <strong>Globant</strong>, as a <strong>QC Trainee</strong> assigned to the <strong>Colsubsidio</strong> project, I found my passion for ensuring software quality. I design test cases, execute manual tests, and am learning automation with Rest Assured.</p>
-                                <p>My engineering background gave me analytical and methodological skills that I now apply in the testing world. I love finding bugs and contributing to making software products better every day.</p>
+                                <p>My engineering background gave me analytical and methodological skills that I now apply in the world of testing. I love finding bugs and contributing to making software products better every day.</p>
                                 
                                 <!-- Quick badges -->
                                 <section class="d-flex flex-wrap gap-2 mt-3">
@@ -1076,18 +1076,18 @@
                             
                             <article class="col-12 col-md-5">
                                 <!-- SKILLS ACCORDION -->
-                                <section class="accordion accordion-flush" id="skillsAccordion">
+                                <section class="accordion accordion-flush" id="accordionHabilidades">
                                     <!-- Technical Skills -->
                                     <article class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTechnical" aria-expanded="true">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTecnicas" aria-expanded="true">
                                                 <i class="bi bi-tools text-primary me-2"></i> Technical Skills
                                             </button>
                                         </h2>
-                                        <article id="collapseTechnical" class="accordion-collapse collapse show" data-bs-parent="#skillsAccordion">
+                                        <article id="collapseTecnicas" class="accordion-collapse collapse show" data-bs-parent="#accordionHabilidades">
                                             <article class="accordion-body">
                                                 <ul class="skill-list">
-                                                    <li><i class="bi bi-bug"></i> Manual and Automation QA</li>
+                                                    <li><i class="bi bi-bug"></i> Manual & Automation QA</li>
                                                     <li><i class="bi bi-arrow-repeat"></i> Rest Assured</li>
                                                     <li><i class="bi bi-filetype-java"></i> Java / JavaScript / Python</li>
                                                     <li><i class="bi bi-bootstrap"></i> Bootstrap 5</li>
@@ -1102,11 +1102,11 @@
                                     <!-- Soft Skills -->
                                     <article class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSoft" aria-expanded="false">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlandas" aria-expanded="false">
                                                 <i class="bi bi-people-fill text-primary me-2"></i> Soft Skills
                                             </button>
                                         </h2>
-                                        <article id="collapseSoft" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                        <article id="collapseBlandas" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
                                             <article class="accordion-body">
                                                 <ul class="skill-list">
                                                     <li><i class="bi bi-people"></i> Teamwork</li>
@@ -1123,11 +1123,11 @@
                                     <!-- Languages -->
                                     <article class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLanguages" aria-expanded="false">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIdiomas" aria-expanded="false">
                                                 <i class="bi bi-translate text-primary me-2"></i> Languages
                                             </button>
                                         </h2>
-                                        <article id="collapseLanguages" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                        <article id="collapseIdiomas" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
                                             <article class="accordion-body">
                                                 <ul class="skill-list">
                                                     <li><i class="bi bi-flag"></i> Spanish (Native)</li>
@@ -1162,7 +1162,7 @@
                             <p class="text-muted mb-2">
                                 <i class="bi bi-building"></i> CESDE | 2025 - Present
                             </p>
-                            <p>Student of Systems Technician with basic knowledge in web and mobile programming, database management, data analysis, and agile methodologies.</p>
+                            <p>Systems Technician student with basic knowledge in web and mobile programming, database management, data analysis, and agile methodologies.</p>
                             <section class="d-flex flex-wrap gap-2">
                                 <span class="badge-tech small"><i class="bi bi-code"></i> Programming</span>
                                 <span class="badge-tech small"><i class="bi bi-database"></i> Databases</span>
@@ -1184,7 +1184,7 @@
                             <p class="text-muted mb-2">
                                 <i class="bi bi-building"></i> Universidad de los Llanos | 2016 - 2023
                             </p>
-                            <p>Agroindustrial Engineer with knowledge in quality control and Good Manufacturing Practices (GMP), interested in process improvement and quality assurance in the agroindustrial industry.</p>
+                            <p>Agroindustrial Engineer with knowledge in quality control and Good Manufacturing Practices (GMP), with an interest in process improvement and quality assurance in the agroindustrial industry.</p>
                             <section class="d-flex flex-wrap gap-2">
                                 <span class="badge-tech small"><i class="bi bi-search"></i> Research</span>
                                 <span class="badge-tech small"><i class="bi bi-gear"></i> Quality Assurance</span>
@@ -1205,7 +1205,7 @@
                             <p class="text-muted mb-2">
                                 <i class="bi bi-building"></i> SENA | 2015
                             </p>
-                            <p>Environmental Management Technician with knowledge in environmental management, conservation of natural resources, and support in implementing programs aimed at environmental protection and sustainable development.</p>
+                            <p>Environmental Management Technician with knowledge in environmental management, natural resource conservation, and support in implementing programs aimed at environmental protection and sustainable development.</p>
                             <section class="d-flex flex-wrap gap-2">
                                 <span class="badge-tech small"><i class="bi bi-globe"></i> Environmental Management</span>
                                 <span class="badge-tech small"><i class="bi bi-droplet"></i> Natural Resources</span>
@@ -1231,7 +1231,7 @@
                             <img src="https://www.universitatcarlemany.com/sites/universitatcarlemany.com/files/images/imgi_60_higiene-alimentaria-en-que-consisteix-objectius-i-beneficis-0.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Good Manufacturing Practices">
                         </figure>
                         <article class="p-3">
-                            <h5 class="h6">GMP Application in Food and Beverage Industry</h5>
+                            <h5 class="h6">Application of GMP in the food and beverage industry</h5>
                             <p class="text-muted small"><i class="bi bi-building"></i> SENA, 2020</p>
                             <p class="small">Certification in GMP Application in the food and beverage industry, focused on quality assurance, safety, and proper handling in production processes.</p>
                             <a href="https://drive.google.com/file/d/1M90EaoKyvY2yGj6E6DrWEZMt1zGZh9_4/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View Certificate</a>
@@ -1248,8 +1248,8 @@
                         <article class="p-3">
                             <h5 class="h6">Food Safety</h5>
                             <p class="text-muted small"><i class="bi bi-building"></i> National Autonomous University of Mexico - COURSERA, 2020</p>
-                            <p class="small">Certification in Food Safety, focused on practices and strategies to ensure food quality, safety, and availability.</p>
-                            <a href="https://drive.google.com/file/d/1L1_0XyuaqhmclcF_gjLlU4dwDMJNWPPW/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View certificate</a>
+                            <p class="small">Certification in Food Safety, focused on practices and strategies to guarantee quality, safety, and availability of food.</p>
+                            <a href="https://drive.google.com/file/d/1L1_0XyuaqhmclcF_gjLlU4dwDMJNWPPW/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View Certificate</a>
                         </article>
                     </article>
                 </article>
@@ -1263,8 +1263,8 @@
                         <article class="p-3">
                             <h5 class="h6">Statistics and Probability</h5>
                             <p class="text-muted small"><i class="bi bi-building"></i> National Autonomous University of Mexico - COURSERA, 2020</p>
-                            <p class="small">Certification in Statistics and Probability, focused on developing skills for data analysis, interpretation, and representation to support decision-making.</p>
-                            <a href="https://drive.google.com/file/d/10p86UH3aIRv75JqXGrRrv4KWi5SOOur_/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View certificate</a>
+                            <p class="small">Certification in Statistics and Probability, focused on developing skills for analysis, interpretation, and representation of data to support decision making.</p>
+                            <a href="https://drive.google.com/file/d/10p86UH3aIRv75JqXGrRrv4KWi5SOOur_/view?usp=sharing" class="btn-custom-primary btn-sm w-100 py-1"><i class="bi bi-file-pdf"></i> View Certificate</a>
                         </article>
                     </article>
                 </article>
@@ -1272,20 +1272,20 @@
         </section>
 
         <!-- CESDE CERTIFICATES SECTION (5 certificates) -->
-        <section id="cesde-certificates" class="mb-5">
+        <section id="certificados-cesde" class="mb-5">
             <h2 class="section-title">
-                <i class="bi bi-award"></i> CESDE Certificates
+                <i class="bi bi-award"></i> CESDE Certifications
             </h2>
     
             <section class="row g-4">
                 <!-- Certificate 1 -->
                 <article class="col-6 col-md-4 col-lg-3">
-                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/catedra ser emprendedor.jpg', 'Entrepreneurial Mindset')">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/catedra ser emprendedor.jpg', 'Being an Entrepreneur Course')">
                         <figure>
-                            <img src="./imagenes/catedra ser emprendedor.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Entrepreneurial Mindset Certificate">
+                            <img src="./imagenes/catedra ser emprendedor.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Being an Entrepreneur Certificate">
                         </figure>
                         <article class="mt-2">
-                            <h5 class="h6 mb-1">Entrepreneurial Mindset</h5>
+                            <h5 class="h6 mb-1">Being an Entrepreneur Course</h5>
                             <p class="small text-muted mb-0">CESDE - 2025</p>
                         </article>
                     </article>
@@ -1293,12 +1293,12 @@
         
                 <!-- Certificate 2 -->
                 <article class="col-6 col-md-4 col-lg-3">
-                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/gestion de las emocioness.jpg', 'Emotional Management')">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/gestion de las emocioness.jpg', 'Emotion Management')">
                         <figure>
-                            <img src="./imagenes/gestion de las emocioness.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Emotional Management Certificate">
+                            <img src="./imagenes/gestion de las emocioness.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Emotion Management Certificate">
                         </figure>
                         <article class="mt-2">
-                            <h5 class="h6 mb-1">Emotional Management</h5>
+                            <h5 class="h6 mb-1">Emotion Management</h5>
                             <p class="small text-muted mb-0">CESDE - 2025</p>
                         </article>
                     </article>
@@ -1332,13 +1332,48 @@
 
                 <!-- Certificate 5 -->
                 <article class="col-6 col-md-4 col-lg-3">
-                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/tablas y graficos dinamicos.jpg', 'Dynamic tables and charts for data management')">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/tablas y graficos dinamicos.jpg', 'Pivot Tables and Charts for Data Management')">
                         <figure>
-                            <img src="./imagenes/tablas y graficos dinamicos.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Dynamic tables and charts for data management Certificate">
+                            <img src="./imagenes/tablas y graficos dinamicos.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Pivot Tables Certificate">
                         </figure>
                         <article class="mt-2">
-                            <h5 class="h6 mb-1">Dynamic tables and charts for data management</h5>
-                            <p class="small text-muted mb-0">CESDE - 2025</p>
+                            <h5 class="h6 mb-1">Pivot Tables and Charts for Data Management</h5>
+                            <p class="small text-muted mb-0">CESDE - 2026</p>
+                        </article>
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <!-- PLATZI CERTIFICATIONS SECTION (NEW) -->
+        <section id="certificados-platzi" class="mb-5">
+            <h2 class="section-title">
+                <i class="bi bi-lightbulb"></i> Platzi Certifications
+            </h2>
+    
+            <section class="row g-4">
+                <!-- Platzi Certificate 1 -->
+                <article class="col-6 col-md-4 col-lg-3">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/programacion-basica.jpg', 'Basic Programming Course')">
+                        <figure>
+                            <img src="./imagenes/programacion-basica.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Platzi Basic Programming Certificate">
+                        </figure>
+                        <article class="mt-2">
+                            <h5 class="h6 mb-1">Basic Programming Course</h5>
+                            <p class="small text-muted mb-0">Platzi - 2025</p>
+                        </article>
+                    </article>
+                </article>
+        
+                <!-- Platzi Certificate 2 -->
+                <article class="col-6 col-md-4 col-lg-3">
+                    <article class="card-modern text-center p-3" style="cursor: pointer;" onclick="openModal('./imagenes/fundamentos-python.jpg', 'Python Fundamentals Course')">
+                        <figure>
+                            <img src="./imagenes/fundamentos-python.jpg" class="img-fluid rounded" style="height: 150px; object-fit: cover; width: 100%;" alt="Platzi Python Fundamentals Certificate">
+                        </figure>
+                        <article class="mt-2">
+                            <h5 class="h6 mb-1">Python Fundamentals Course</h5>
+                            <p class="small text-muted mb-0">Platzi - 2025</p>
                         </article>
                     </article>
                 </article>
@@ -1377,7 +1412,7 @@
                         <article class="col-12 col-md-9">
                             <h4 class="h5 mb-1">Agroindustrial Engineer - Quality</h4>
                             <p class="text-muted mb-2">Universal Ingenieros de Alimentos</p>
-                            <p class="small">Supervision and personnel management, preparation of nutritional labeling, technical sheets, and GMP manuals, project formulation for client companies, and PQR management.</p>
+                            <p class="small">Personnel supervision and management, preparation of nutritional labeling, technical sheets and GMP manuals, project formulation for client companies, and PQR management.</p>
                         </article>
                     </section>
                 </article>
@@ -1399,8 +1434,8 @@
             </article>
         </section>
 
-        <!-- TECH PROJECTS SECTION - DESKTOP VERSION (3 CARDS PER SLIDE) -->
-        <section id="tech-projects" class="mb-5">
+        <!-- TECH PROJECTS SECTION - DESKTOP VERSION (3 cards per slide) -->
+        <section id="projects" class="mb-5">
             <h2 class="section-title">
                 <i class="bi bi-github"></i> Tech Projects
             </h2>
@@ -1423,7 +1458,7 @@
                                                 <h5 class="h6 mb-0">Personal Diary</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-android"></i> Android Studio</p>
-                                            <p class="small">Mobile diary application designed to record thoughts, emotions, and daily experiences.</p>
+                                            <p class="small">Mobile personal diary application designed to record daily thoughts, emotions, and experiences.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-android"></i> Android Studio</span>
                                             </section>
@@ -1442,7 +1477,7 @@
                                                 <h5 class="h6 mb-0">Carreras Sport</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Informational Website</p>
-                                            <p class="small">Informational website about Formula 1 offering news, analysis, and exclusive content for subscribers.</p>
+                                            <p class="small">Informational Formula 1 website offering news, analysis, and exclusive content for subscribers.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
                                                 <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
@@ -1463,7 +1498,7 @@
                                                 <h5 class="h6 mb-0">DondeComo</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Web App</p>
-                                            <p class="small">Website with information about restaurants, including location, description, and available services.</p>
+                                            <p class="small">Website with restaurant information, including location, description, and available services.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
                                                 <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
@@ -1523,14 +1558,14 @@
                                 <article class="col-md-4">
                                     <article class="card-modern">
                                         <figure>
-                                            <img src="https://cdn-icons-png.flaticon.com/512/536/536452.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Flowchart - GitHub">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/536/536452.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Process Flowchart - GitHub">
                                         </figure>
                                         <article class="p-3">
                                             <header class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="h6 mb-0">Process Flowchart</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-filetype-py"></i> Python/Matplotlib</p>
-                                            <p class="small">Flowchart of a parking lot's operation.</p>
+                                            <p class="small">Flowchart of a parking lot operation.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-filetype-py"></i> Python</span>
                                                 <span class="badge-tech small"><i class="bi bi-bar-chart"></i> Matplotlib</span>
@@ -1578,7 +1613,7 @@
                                                 <h5 class="h6 mb-0">Personal Diary</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-android"></i> Android Studio</p>
-                                            <p class="small">Mobile diary application designed to record thoughts, emotions, and daily experiences.</p>
+                                            <p class="small">Mobile personal diary application designed to record daily thoughts, emotions, and experiences.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-android"></i> Android Studio</span>
                                             </section>
@@ -1602,7 +1637,7 @@
                                                 <h5 class="h6 mb-0">Carreras Sport</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Informational Website</p>
-                                            <p class="small">Informational website about Formula 1 offering news, analysis, and exclusive content for subscribers.</p>
+                                            <p class="small">Informational Formula 1 website offering news, analysis, and exclusive content for subscribers.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
                                                 <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
@@ -1628,7 +1663,7 @@
                                                 <h5 class="h6 mb-0">DondeComo</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-browser-chrome"></i> Web App</p>
-                                            <p class="small">Website with information about restaurants, including location, description, and available services.</p>
+                                            <p class="small">Website with restaurant information, including location, description, and available services.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-filetype-html"></i> HTML</span>
                                                 <span class="badge-tech small"><i class="bi bi-filetype-css"></i> CSS</span>
@@ -1697,14 +1732,14 @@
                                 <article class="col-12">
                                     <article class="card-modern">
                                         <figure>
-                                            <img src="https://cdn-icons-png.flaticon.com/512/536/536452.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Flowchart - GitHub">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/536/536452.png" class="card-img-top" style="height: 250px; object-fit: contain; background-color: #f5f5f5; padding: 20px;" alt="Process Flowchart - GitHub">
                                         </figure>
                                         <article class="p-3">
                                             <header class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="h6 mb-0">Process Flowchart</h5>
                                             </header>
                                             <p class="text-muted small"><i class="bi bi-filetype-py"></i> Python/Matplotlib</p>
-                                            <p class="small">Flowchart of a parking lot's operation.</p>
+                                            <p class="small">Flowchart of a parking lot operation.</p>
                                             <section class="d-flex flex-wrap gap-1 mb-2">
                                                 <span class="badge-tech small"><i class="bi bi-filetype-py"></i> Python</span>
                                                 <span class="badge-tech small"><i class="bi bi-bar-chart"></i> Matplotlib</span>
@@ -1756,7 +1791,7 @@
                         <article class="p-3">
                             <h5 class="h6">GMP Trainings</h5>
                             <p class="text-muted small"><i class="bi bi-building"></i> Universal Ingenieros de Alimentos - 2023</p>
-                            <p class="small">Utadeo, through consulting with the company Universal Ingenieros de Alimentos, trained entrepreneurs from the baking industry in the Llanos region.</p>
+                            <p class="small">Utadeo, through consulting with Universal Ingenieros de Alimentos, trained entrepreneurs and business owners from the Llanos region in the baking industry.</p>
                             <a href="https://www.utadeo.edu.co/es/noticia/destacadas/ciencias-naturales-e-ingenieria/36/utadeo-capacita-empresarios-de-los-llanos-orientales-en-buenas-practicas-de-manufactura" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-newspaper"></i> View news</a>
                         </article>
                     </article>
@@ -1766,10 +1801,10 @@
                 <article class="col-12 col-md-4">
                     <article class="card-modern">
                         <figure>
-                            <img src="https://i.ytimg.com/vi/RqmPLEawDrQ/maxresdefault.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Thesis">
+                            <img src="https://i.ytimg.com/vi/RqmPLEawDrQ/maxresdefault.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Degree Project">
                         </figure>
                         <article class="p-3">
-                            <h5 class="h6">Thesis</h5>
+                            <h5 class="h6">Degree Project</h5>
                             <p class="text-muted small"><i class="bi bi-building"></i> Universidad de los Llanos, 2023</p>
                             <p class="small">Design of Good Manufacturing Practices Documentation for the Company "El Mundo de los Lácteos CF S.A.S." in Chiquinquirá, Boyacá.</p>
                             <a href="https://drive.google.com/file/d/171VwLNNHqhNli4D5ijAxT3XefdNSiu0W/view?usp=sharing" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-file-pdf"></i> View PDF</a>
@@ -1786,7 +1821,7 @@
                         <article class="p-3">
                             <h5 class="h6">Experimental Work</h5>
                             <p class="text-muted small"><i class="bi bi-building"></i> Universidad de los Llanos - 2019</p>
-                            <p class="small">Physicochemical analysis of nettle leaf essential oil, extracted by steam distillation and microwave-assisted hydrodistillation, evaluating its chemical and physical properties.</p>
+                            <p class="small">Physicochemical analysis of nettle leaf essential oil, extracted by steam distillation and microwave-assisted hydrodistillation.</p>
                             <a href="https://drive.google.com/file/d/1bKux-uKjBDCyhLEqXr6Z9xNnZLfEnaQ9/view?usp=sharing" class="btn-custom-outline btn-sm w-100 py-1" target="_blank"><i class="bi bi-file-pdf"></i> View PDF</a>
                         </article>
                     </article>
@@ -1858,7 +1893,7 @@
                 <article class="col-12 col-md-6 col-lg-4 mx-auto text-center">
                     <article class="card-modern p-4">
                         <section id="qrcode" class="mb-3"></section>
-                        <h5 class="h6 mb-2">Scan to view my portfolio</h5>
+                        <h5 class="h6 mb-2">Scan to see my portfolio</h5>
                         <p class="small text-muted">Or visit: <span id="currentUrl"></span></p>
                         <button class="btn-custom-outline btn-sm" onclick="downloadQR()">
                             <i class="bi bi-download"></i> Download QR
@@ -1934,16 +1969,16 @@
                 <article class="modal-body">
                     <form>
                         <article class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your name">
+                            <label for="nombre" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Your name">
                         </article>
                         <article class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="your@email.com">
                         </article>
                         <article class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="3" placeholder="How can I help you?"></textarea>
+                            <label for="mensaje" class="form-label">Message</label>
+                            <textarea class="form-control" id="mensaje" rows="3" placeholder="How can I help you?"></textarea>
                         </article>
                     </form>
                 </article>
@@ -1955,7 +1990,7 @@
         </section>
     </article>
 
-    <!-- Script for certificates modal -->
+    <!-- Script for certificate modal -->
     <script>
         function openModal(imageUrl, title) {
             // Create the modal
@@ -1972,7 +2007,7 @@
             document.body.appendChild(modal);
             modal.style.display = 'block';
             
-            // Close modal when clicking the X
+            // Close modal when clicking X
             const closeBtn = modal.querySelector('.modal-certificado-close');
             closeBtn.onclick = function() {
                 modal.remove();
@@ -2016,7 +2051,7 @@
             }
         });
 
-        // Script to toggle dark/light mode
+        // Script to toggle between light and dark mode
         document.addEventListener('DOMContentLoaded', function() {
             const themeToggle = document.getElementById('themeToggle');
             const themeIcon = document.getElementById('themeIcon');
@@ -2062,24 +2097,27 @@
                 });
             }
 
-            // Language toggle
             if (languageToggle) {
+                if (window.location.pathname.includes('index.html')) {
+                    languageText.textContent = 'ES';
+                } else {
+                    languageText.textContent = 'EN';
+                }
+
                 languageToggle.addEventListener('click', function() {
-                    if (window.location.pathname.includes('index-en.html')) {
+                    if (window.location.pathname.includes('index.html')) {
                         window.location.href = 'index.html';
                     } else {
-                        window.location.href = 'index-en.html';
+                        window.location.href = 'index.html';
                     }
                 });
             }
 
-            // Display current URL
             const currentUrlElement = document.getElementById('currentUrl');
             if (currentUrlElement) {
                 currentUrlElement.textContent = window.location.href;
             }
             
-            // Generate QR
             const qrcodeElement = document.getElementById("qrcode");
             if (qrcodeElement) {
                 new QRCode(qrcodeElement, {
@@ -2092,12 +2130,11 @@
                 });
             }
             
-            // Function to download QR
             window.downloadQR = function() {
                 const canvas = document.querySelector('#qrcode canvas');
                 if (canvas) {
                     const link = document.createElement('a');
-                    link.download = 'portfolio-nicolalba-qr.png';
+                    link.download = 'nicolalba-portfolio-qr.png';
                     link.href = canvas.toDataURL();
                     link.click();
                 }
